@@ -61,10 +61,15 @@ class _MainPageState extends State<MainPage> {
             backgroundColor = getRandomColor(withOpacity);
           });
         },
-        child: Center(
-          child: Container(
-            color: backgroundColor,
-          ),
+        child: Container(
+          width: MediaQuery.of(context).size.width,
+          height: MediaQuery.of(context).size.height,
+          color: backgroundColor,
+          child: const Center(
+              child: Text(
+            "Hey there!",
+            style: TextStyle(fontSize: 25, color: Colors.white),
+          )),
         ),
       ), // This trailing comma makes auto-formatting nicer for build methods.
     );
